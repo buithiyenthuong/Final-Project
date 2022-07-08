@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    tools:context=".ui.AddNewPlanActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csHeader"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/icBack"
+            android:padding="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_back"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="Chi tiết kế hoạch"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvTimeTitle"
+        android:text="Thời gian"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/csHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTime"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTimeTitle"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+        <TextView
+            android:id="@+id/tvTime"
+            android:text="20/02/2022  den 01/03/2022"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvTitle1"
+        android:text="Tiêu đề"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/cardTime"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTitle"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+        <TextView
+            android:id="@+id/tvTitle"
+            android:text="Vui lòng nhập tiêu đề"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:maxLines="2"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvContent1"
+        android:text="Nội Dung"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/cardTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvContent1"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="208dp">
+        <TextView
+            android:id="@+id/tvContent"
+            android:text="Vui lòng nhập nội dung kế hoạch"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_marginTop="25dp"
+        android:text="xoá kế hoạch"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button_delete"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

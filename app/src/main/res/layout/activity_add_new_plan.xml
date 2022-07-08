@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ECECEC"
+    android:id="@+id/csMain"
+    tools:context=".ui.AddNewPlanActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/csHeader"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/teal_200"
+        android:layout_height="?attr/actionBarSize">
+        <ImageView
+            android:id="@+id/icBack"
+            android:padding="14dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/ic_back"
+            android:layout_width="48dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:text="Tạo kế hoạch mới"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:text="Thời gian"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/csHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/llTime"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvStartDate"
+                android:text="DD/MM/YYYY"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:text="Tới"
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginLeft="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvEndDate"
+                android:text="DD/MM/YYYY"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:text="Tiêu đề"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/llTime"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTitle"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="58dp">
+        <EditText
+            android:id="@+id/etTitle"
+            android:hint="Vui lòng nhập tiêu đề"
+            android:textSize="14sp"
+            android:gravity="top"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvContent"
+        android:text="Nội Dung"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:fontFamily="@font/roboto_bold"
+        android:layout_margin="15dp"
+        app:layout_constraintTop_toBottomOf="@id/cardTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContent"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/tvContent"
+        android:layout_marginHorizontal="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="208dp">
+        <EditText
+            android:id="@+id/etContent"
+            android:hint="Vui lòng nhập nội dung kế hoạch"
+            android:textSize="14sp"
+            android:gravity="top"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:fontFamily="@font/roboto_regular"
+            android:padding="15dp"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_marginTop="25dp"
+        android:text="Tạo kế hoạch"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_button_create"
+        android:layout_marginHorizontal="20dp"
+        app:layout_constraintTop_toBottomOf="@id/cardContent"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
